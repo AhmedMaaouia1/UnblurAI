@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+*.pyc
+
+# Jupyter Notebooks
+*.ipynb_checkpoints/
+*.ipynb
+!training_notebook.ipynb
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+dist-ssr/
+package-lock.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+
+# Models et Données (NE PAS COMMIT - trop gros)
+backend/models/*.pth
+backend/models/**/*.pth
+!backend/models/.gitkeep
+data/
+results/
+checkpoints/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Env
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Markdown de documentation temporaire
+*_TEMP.md
+OPTIMIZATIONS_APPLIED.md
+GUIDE_RAPIDE.md
+RECAP_MODIFICATIONS.md
+
+# Test files
+test_images/
+output_images/
+temp/
