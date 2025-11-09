@@ -10,6 +10,15 @@ AI-Powered JPEG Artifact Removal - Restaurez la qualité de vos images compress�
 
 UnblurAI utilise un modèle U-Net Enhanced optimisé pour supprimer les artefacts de compression JPEG et restaurer les détails perdus de vos images.
 
+## Interface
+Interface web simple pour uploader, configurer et restaurer vos images.
+
+![Interface principale](docs/images/interface1.png)
+
+## Résultats
+
+![Avant/Après](docs/images/interface_resultat.png)
+
 ## Caractéristiques
 
 - **Quality-Aware Conditioning** : Adaptation automatique au niveau de compression (Q5-Q30)
@@ -21,16 +30,16 @@ UnblurAI utilise un modèle U-Net Enhanced optimisé pour supprimer les artefact
 
 ## Performances
 
-Résultats sur le dataset DIV2K (50 images de validation):
+Résultats sur le dataset DIV2K (50 images de validation) basés sur le notebook final :
 
 | Qualité JPEG | PSNR Avant | PSNR Après | **Gain PSNR** | SSIM Avant | SSIM Après | **Gain SSIM** |
 |-------------|-----------|-----------|--------------|-----------|-----------|--------------|
-| **Q5**  | 24.47 dB | 25.48 dB | **+1.01 dB** | 0.6904 | 0.7378 | **+0.047** |
-| **Q10** | 27.62 dB | 28.62 dB | **+1.00 dB** | 0.7922 | 0.8282 | **+0.036** |
-| **Q20** | 30.26 dB | 31.06 dB | **+0.80 dB** | 0.8603 | 0.8820 | **+0.022** |
-| **Q30** | 31.67 dB | 32.35 dB | **+0.67 dB** | 0.8891 | 0.9041 | **+0.015** |
+| **Q5** | 24.47 dB | 25.59 dB | **+1.12 dB** | 0.6904 | 0.7434 | **+0.0530** |
+| **Q10** | 27.62 dB | 28.72 dB | **+1.10 dB** | 0.7922 | 0.8315 | **+0.0393** |
+| **Q20** | 30.26 dB | 31.17 dB | **+0.91 dB** | 0.8603 | 0.8837 | **+0.0234** |
+| **Q30** | 31.67 dB | 32.45 dB | **+0.77 dB** | 0.8891 | 0.9056 | **+0.0165** |
 
-**Moyenne globale** : **+0.87 dB PSNR** | **+0.030 SSIM**
+**Moyenne globale** : **+0.98 dB PSNR** | **+0.0330 SSIM**
 
 ## Démarrage Rapide
 
@@ -183,7 +192,7 @@ Le modèle a été entraîné sur le dataset **DIV2K** (800 images) avec les hyp
 BATCH_SIZE = 8
 LEARNING_RATE = 1e-4
 WEIGHT_DECAY = 1e-6
-NUM_EPOCHS = 55
+NUM_EPOCHS = 60
 PATCH_SIZE = 256
 
 # Augmentation
@@ -195,7 +204,7 @@ PATCH_SIZE = 256
 ReduceLROnPlateau(factor=0.5, patience=5)
 ```
 
-**Durée d'entraînement** : 1h30 sur GPU NVIDIA T4
+**Durée d'entraînement** : 1h46 sur GPU NVIDIA T4
 
 Pour entraîner votre propre modèle, consultez le notebook de training sur Google Colab (disponible dans les releases).
 
