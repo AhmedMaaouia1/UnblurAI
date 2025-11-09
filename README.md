@@ -1,6 +1,6 @@
-# UnblurAI 🎨
+# UnblurAI
 
-> **AI-Powered JPEG Artifact Removal** - Restaurez la qualité de vos images compressées JPEG
+AI-Powered JPEG Artifact Removal - Restaurez la qualité de vos images compressées JPEG
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1-red.svg)](https://pytorch.org/)
@@ -10,29 +10,29 @@
 
 UnblurAI utilise un modèle U-Net Enhanced optimisé pour supprimer les artefacts de compression JPEG et restaurer les détails perdus de vos images.
 
-## ✨ Caractéristiques
+## Caractéristiques
 
-- 🎯 **Quality-Aware Conditioning** : Adaptation automatique au niveau de compression (Q5-Q30)
-- 🔬 **Residual Learning** : Prédiction du delta optimal pour une restauration précise
-- 🎨 **Loss Multi-Composantes** : Charbonnier + MS-SSIM + Edge Loss pour préserver les détails
-- ⚡ **Compression JPEG Aléatoire** : Généralisation robuste sur toutes les qualités
-- 🚀 **API REST** : Intégration facile dans vos workflows
-- 🐳 **Docker Ready** : Déploiement en un clic
+- **Quality-Aware Conditioning** : Adaptation automatique au niveau de compression (Q5-Q30)
+- **Residual Learning** : Prédiction du delta optimal pour une restauration précise
+- **Loss Multi-Composantes** : Charbonnier + MS-SSIM + Edge Loss pour préserver les détails
+- **Compression JPEG Aléatoire** : Généralisation robuste sur toutes les qualités
+- **API REST** : Intégration facile dans vos workflows
+- **Docker Ready** : Déploiement en un clic
 
-## 📊 Performances
+## Performances
 
 Résultats sur le dataset DIV2K (50 images de validation):
 
 | Qualité JPEG | PSNR Avant | PSNR Après | **Gain PSNR** | SSIM Avant | SSIM Après | **Gain SSIM** |
 |-------------|-----------|-----------|--------------|-----------|-----------|--------------|
-| **Q5**  | 24.47 dB | 25.48 dB | **+1.01 dB** ✅ | 0.6904 | 0.7378 | **+0.047** ✅ |
-| **Q10** | 27.62 dB | 28.62 dB | **+1.00 dB** ✅ | 0.7922 | 0.8282 | **+0.036** ✅ |
-| **Q20** | 30.26 dB | 31.06 dB | **+0.80 dB** ✅ | 0.8603 | 0.8820 | **+0.022** ✅ |
-| **Q30** | 31.67 dB | 32.35 dB | **+0.67 dB** ✅ | 0.8891 | 0.9041 | **+0.015** ✅ |
+| **Q5**  | 24.47 dB | 25.48 dB | **+1.01 dB** | 0.6904 | 0.7378 | **+0.047** |
+| **Q10** | 27.62 dB | 28.62 dB | **+1.00 dB** | 0.7922 | 0.8282 | **+0.036** |
+| **Q20** | 30.26 dB | 31.06 dB | **+0.80 dB** | 0.8603 | 0.8820 | **+0.022** |
+| **Q30** | 31.67 dB | 32.35 dB | **+0.67 dB** | 0.8891 | 0.9041 | **+0.015** |
 
 **Moyenne globale** : **+0.87 dB PSNR** | **+0.030 SSIM**
 
-## 🚀 Démarrage Rapide
+## Démarrage Rapide
 
 ### Prérequis
 
@@ -96,7 +96,7 @@ npm install
 npm run dev
 ```
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```
 UnblurAI/
@@ -114,14 +114,15 @@ UnblurAI/
 │   ├── main.py              # API FastAPI
 │   ├── requirements.txt
 │   ├── Dockerfile
-│   └── models/              # ⚠️ Téléchargez best_model.pth depuis Releases
+│   └── models/              # Téléchargez best_model.pth depuis Releases
 │
+├── notebooks/                # Jupyter notebooks d'entraînement
 ├── docker-compose.yml        # Orchestration Docker
 ├── .gitignore
 └── README.md
 ```
 
-## 🔧 Architecture du Modèle
+## Architecture du Modèle
 
 ### U-Net Enhanced avec Optimisations
 
@@ -138,7 +139,7 @@ UnblurAI/
 3. **Quality-Aware Conditioning** : Adaptation au niveau de compression
 4. **Loss Multi-Composantes** : Préservation des détails et contours
 
-## 🌐 API REST
+## API REST
 
 ### Endpoints
 
@@ -173,7 +174,7 @@ Restaure et retourne un JPEG (fichier plus léger).
 
 Vérification de l'état de l'API.
 
-## 🎓 Entraînement du Modèle
+## Entraînement du Modèle
 
 Le modèle a été entraîné sur le dataset **DIV2K** (800 images) avec les hyperparamètres suivants:
 
@@ -198,7 +199,7 @@ ReduceLROnPlateau(factor=0.5, patience=5)
 
 Pour entraîner votre propre modèle, consultez le notebook de training sur Google Colab (disponible dans les releases).
 
-## ⚙️ Configuration
+## Configuration
 
 ### Variables d'Environnement
 
@@ -214,29 +215,29 @@ ALLOWED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 const API_URL = "http://localhost:8000";  // URL de l'API backend
 ```
 
-## 📝 TODO / Améliorations Futures
+## TODO / Améliorations Futures
 
-- [ ] Ajouter Perceptual Loss (VGG relu3_3) → **+0.15-0.25 dB**
-- [ ] Augmenter patch size à 384×384 → **+0.10-0.15 dB**
-- [ ] Ensemble de 3 modèles → **+0.20-0.30 dB**
+- [ ] Ajouter Perceptual Loss (VGG relu3_3) -> **+0.15-0.25 dB**
+- [ ] Augmenter patch size à 384x384 -> **+0.10-0.15 dB**
+- [ ] Ensemble de 3 modèles -> **+0.20-0.30 dB**
 - [ ] Fine-tuning séparé par qualité (Q5-15 vs Q15-30)
 - [ ] Test-Time Augmentation (TTA)
 - [ ] Support des images haute résolution (>4K)
 - [ ] Batch processing API endpoint
 - [ ] Interface web avec comparaison avant/après
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Le modèle ne charge pas
 
 ```bash
-❌ Erreur: FileNotFoundError: models/best_model.pth
+Erreur: FileNotFoundError: models/best_model.pth
 ```
 
 **Solution** : Téléchargez le modèle depuis les [Releases](https://github.com/AhmedMaaouia1/UnblurAI/releases/latest) et placez-le dans `backend/models/best_model.pth`.
 
 ```bash
-❌ Erreur: size mismatch for enc1.0.weight
+Erreur: size mismatch for enc1.0.weight
 ```
 
 **Solution** : Assurez-vous d'utiliser un modèle entraîné avec `in_channels=4` (version optimisée).
@@ -249,22 +250,22 @@ const API_URL = "http://localhost:8000";  // URL de l'API backend
 
 **Solution** : Vérifier la cohérence de normalisation `[-1, 1]` dans tout le pipeline.
 
-## 📄 Licence
+## Licence
 
 Ce projet est sous licence MIT. Voir [LICENSE](LICENSE) pour plus de détails.
 
-## 🙏 Remerciements
+## Remerciements
 
 - **Dataset** : [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (NTIRE 2017)
 - **Architecture** : Inspiré de U-Net et ResNet
 - **Frameworks** : PyTorch, FastAPI, React
 
-## 📧 Contact
+## Contact
 
 Pour toute question ou suggestion :
-- **Issues** : [GitHub Issues](https://github.com/votre-username/UnblurAI/issues)
-- **Discussions** : [GitHub Discussions](https://github.com/votre-username/UnblurAI/discussions)
+- **Issues** : [GitHub Issues](https://github.com/AhmedMaaouia1/UnblurAI/issues)
+- **Discussions** : [GitHub Discussions](https://github.com/AhmedMaaouia1/UnblurAI/discussions)
 
 ---
 
-**Fait avec ❤️ et PyTorch**
+**Développé avec PyTorch**

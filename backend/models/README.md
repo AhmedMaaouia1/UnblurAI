@@ -1,14 +1,14 @@
 # Models Directory
 
-⚠️ **Les fichiers modèles (.pth) sont trop volumineux pour Git (>100 MB).**
+**Les fichiers modèles (.pth) sont trop volumineux pour Git (>100 MB).**
 
-## 📥 Téléchargement du Modèle
+## Téléchargement du Modèle
 
 Téléchargez le modèle pré-entraîné depuis les **GitHub Releases** :
 
-👉 [**Télécharger best_model.pth (161 MB)**](https://github.com/AhmedMaaouia1/UnblurAI/releases/latest)
+[**Télécharger best_model.pth (161 MB)**](https://github.com/AhmedMaaouia1/UnblurAI/releases/latest)
 
-## 📂 Installation
+## Installation
 
 ### Option 1 : Téléchargement Automatique (Linux/Mac)
 
@@ -30,7 +30,7 @@ Invoke-WebRequest -Uri "https://github.com/AhmedMaaouia1/UnblurAI/releases/downl
 2. Téléchargez `best_model.pth` (161 MB)
 3. Placez-le dans ce dossier : `backend/models/best_model.pth`
 
-## 🚀 Vérification
+## Vérification
 
 Après téléchargement, lancez l'application :
 
@@ -45,7 +45,7 @@ INFO:     Model loaded successfully from models/best_model.pth
 INFO:     Application startup complete.
 ```
 
-## 📊 Détails du Modèle
+## Détails du Modèle
 
 - **Architecture** : U-Net Enhanced (4-channel input)
 - **Paramètres** : 63,585,731 (63.6M)
@@ -55,7 +55,7 @@ INFO:     Application startup complete.
 - **Entraînement** : 55 epochs sur DIV2K (1h30 sur T4 GPU)
 - **Taille** : 161 MB
 
-## 🔧 Entraîner Votre Propre Modèle
+## Entraîner Votre Propre Modèle
 
 Si vous souhaitez entraîner votre propre modèle :
 
@@ -65,9 +65,9 @@ Si vous souhaitez entraîner votre propre modèle :
 
 Le modèle entraîné sera automatiquement sauvegardé dans ce dossier.
 
-## ⚠️ Important
+## Important
 
-**Ne commitez jamais les fichiers .pth dans Git !**
+**Ne commitez jamais les fichiers .pth dans Git.**
 
 Ils sont automatiquement exclus via `.gitignore` car trop volumineux (>100 MB).
 Pour partager un nouveau modèle, utilisez GitHub Releases.

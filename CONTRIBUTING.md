@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Merci de votre intérêt pour contribuer à UnblurAI ! 🎉
+Merci de votre intérêt pour contribuer à UnblurAI.
 
 ## Comment Contribuer
 
@@ -26,7 +26,7 @@ Pour les nouvelles fonctionnalités :
 
 ```bash
 # Fork le projet
-git clone https://github.com/votre-username/UnblurAI.git
+git clone https://github.com/AhmedMaaouia1/UnblurAI.git
 cd UnblurAI
 
 # Créer une branche
@@ -88,8 +88,8 @@ npm test
 
 ## Questions ?
 
-N'hésitez pas à ouvrir une [discussion](https://github.com/votre-username/UnblurAI/discussions) !
+N'hésitez pas à ouvrir une [discussion](https://github.com/AhmedMaaouia1/UnblurAI/discussions).
 
 ---
 
-**Merci de contribuer à UnblurAI ! 🚀**
+**Merci de contribuer à UnblurAI.**
